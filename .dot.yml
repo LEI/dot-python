@@ -1,0 +1,8 @@
+---
+role:
+  pkg:
+    - python
+  post_install:
+    - python --version
+    # - command: ./install-pip.sh
+    #   os: ["!archlinux"]
