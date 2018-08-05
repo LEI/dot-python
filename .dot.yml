@@ -11,6 +11,9 @@ role:
     #   os: ["cygwin"]
   post_install:
     - python --version
+    - python3 --version
+    - pip --version
+    - pip3 --version
     # - command: pip install{{if .OS "darwin"}} --user python{{end}} pip
     #   os: ["!arch"]
     # pip3: --no-cache-dir
