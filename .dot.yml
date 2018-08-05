@@ -6,7 +6,7 @@ role:
     - name: py-pip
       os: ["alpine"]
     - name: python-pip
-      os: ["arch", "centos"]
+      os: ["arch", "centos"] # centos: epel-release
     # - name: python-dev python3-dev
     #   os: ["debian"]
     # - name: python-setuptools
