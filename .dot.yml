@@ -2,7 +2,14 @@
 role:
   pkg:
     - python
+    - python3
+    - name: python-pip
+      os: ["arch", "centos"]
+    # - name: python-dev python3-dev
+    #   os: ["debian"]
+    # - name: python-setuptools
+    #   os: ["cygwin"]
   post_install:
     - python --version
     # - command: ./install-pip.sh
-    #   os: ["!archlinux"]
+    #   os: ["!arch"]
