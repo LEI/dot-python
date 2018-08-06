@@ -18,11 +18,13 @@ role:
     # TODO: virtualenv
   post_install:
     - python --version
-    - command: sudo yum install --quiet -y python36
+    - command: |
+        sudo yum install --quiet -y python36-setuptools;
+        sudo easy_install-3.6 pip
       os: ["centos"]
     - python3 --version || python36 --version
     - pip --version
-    - pip3 --version || true
+    - pip3 --version # || true
     # - command: pip install{{if .OS "darwin"}} --user python{{end}} pip
     #   os: ["!arch"]
     # pip3: --no-cache-dir
