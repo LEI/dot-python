@@ -24,7 +24,7 @@ role:
       os: ["centos"]
     - python3 --version || python36 --version
     - pip --version
-    - pip3 --version # || true
+    - pip3 --version
     # - command: pip install{{if .OS "darwin"}} --user python{{end}} pip
     #   os: ["!arch"]
     # pip3: --no-cache-dir
