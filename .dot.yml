@@ -18,7 +18,9 @@ role:
     # TODO: virtualenv
   post_install:
     - python --version
-    - command: yum install -qy python36; alias python3="python36"
+    - command: |
+        sudo yum install --quiet -y python36;
+        alias python3="python36"
       os: ["centos"]
     - python3 --version
     - pip --version
