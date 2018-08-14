@@ -2,7 +2,8 @@
 role:
   pkg:
     - python
-    - python3
+    - name: python3
+      os: ["!centos"]
     - name: py-pip
       os: ["alpine"]
     - name: python-pip # centos: epel-release
