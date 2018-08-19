@@ -4,6 +4,7 @@ role:
     - name: python
       action: install
     - name: python3
+      action: install
       os: ["!centos"]
     - name: py-pip
       os: ["alpine"]
