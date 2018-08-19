@@ -1,7 +1,8 @@
 ---
 role:
   pkg:
-    - python
+    - name: python
+      action: install
     - name: python3
       os: ["!centos"]
     - name: py-pip
