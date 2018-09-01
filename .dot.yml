@@ -16,8 +16,8 @@ role:
       os: ["debian"]
     # - name: python-dev python3-dev
     #   os: ["debian"]
-    # - name: python-setuptools
-    #   os: ["cygwin"]
+    - name: python-setuptools
+      os: ["debian"] # cygwin
     # TODO: virtualenv
   post_install:
     - python --version
