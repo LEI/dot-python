@@ -3,9 +3,12 @@ role:
   pkg:
     - name: python
       action: install
+    - name: python2
+      action: install
+      os: ["android"]
     - name: python3
       action: install
-      os: ["!centos"]
+      os: ["!android", "!centos"]
     - name: py-pip
       os: ["alpine"]
     - name: python-pip # centos: epel-release
