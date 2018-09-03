@@ -26,10 +26,10 @@ role:
         - py-setuptools
         - py3-setuptools
       os: ["alpine"]
-    - name:
-        - python-setuptools
-        - python3-setuptools
-      os: ["debian"] # cygwin
+    # - name:
+    #     - python-setuptools
+    #     - python3-setuptools
+    #   os: ["debian"] # cygwin
     # TODO: virtualenv
   post_install:
     - python --version
