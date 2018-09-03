@@ -7,10 +7,8 @@ role:
       action: install
       os: ["!centos"]
 
-    # - name:
-    #     - py-pip
-    #     - py2-pip
-    #   os: ["alpine"]
+    - name: py-pip # py2-pip
+      os: ["alpine"]
     - name: python2-pip
       os: ["archlinux"]
     - name: python-pip # centos: epel-release
@@ -37,8 +35,7 @@ role:
         sudo easy_install-3.6 pip
       os: ["centos"]
     - python3 --version || python36 --version
-    - command: pip --version
-      if: hash pip
+    - pip --version
     - pip2 --version
     - pip3 --version
     # - command: pip install{{if .OS "darwin"}} --user python{{end}} pip
