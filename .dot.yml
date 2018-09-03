@@ -37,7 +37,8 @@ role:
         sudo easy_install-3.6 pip
       os: ["centos"]
     - python3 --version || python36 --version
-    - pip --version
+    - command: pip --version
+      if: hash pip
     - pip2 --version
     - pip3 --version
     # - command: pip install{{if .OS "darwin"}} --user python{{end}} pip
