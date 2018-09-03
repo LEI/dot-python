@@ -51,7 +51,7 @@ role:
     #     pip3 install --quiet --user setuptools wheel
     #   os: ["alpine"]
     - pip --version
-    - name: pip2 --version
+    - command: pip2 --version
       os: ["!android"]
     - pip3 --version
     # - command: pip install{{if .OS "darwin"}} --user python{{end}} pip
