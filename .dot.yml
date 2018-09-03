@@ -36,7 +36,7 @@ role:
       os: ["centos"]
     - python3 --version || python36 --version
     - pip --version
-    - name: pip2 --version
+    - command: pip2 --version
       os: ["!archlinux"]
     - pip3 --version
     # - command: pip install{{if .OS "darwin"}} --user python{{end}} pip
