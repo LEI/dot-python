@@ -3,10 +3,12 @@ role:
   pkg:
     - name: python
       action: install
+    - name: python2
+      action: install
+      os: ["android"]
     - name: python3
       action: install
-      os: ["!centos"]
-
+      os: ["!android", "!centos"]
     - name: py-pip # py2-pip
       os: ["alpine"]
     - name: python2-pip
@@ -38,6 +40,8 @@ role:
         sudo easy_install-3.6 pip
       # if: '[ "$DOT_PKG" -eq 1 ]'
       os: ["centos"]
+    # TODO symlink python3 to python36 (centos)
+    - python3 --version || python36 --version
     # - command: pip install --upgrade --user pip
     - command: |
         sudo pip2 install --upgrade pip
@@ -47,10 +51,9 @@ role:
     #     pip2 install --quiet --user setuptools wheel
     #     pip3 install --quiet --user setuptools wheel
     #   os: ["alpine"]
-    # TODO symlink python3 to python36 (centos)
-    - python3 --version || python36 --version
     - pip --version
-    - pip2 --version
+    - command: pip2 --version
+      os: ["!android"]
     - pip3 --version
     # - command: pip install{{if .OS "darwin"}} --user python{{end}} pip
     #   os: ["!arch"]
