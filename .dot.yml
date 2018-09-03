@@ -9,10 +9,10 @@ role:
 
     - name: py-pip
       os: ["alpine"]
+    - name: python-pip2
+      os: ["archlinux"]
     - name: python-pip # centos: epel-release
-      os: ["arch", "centos", "debian"]
-    # - name: python2-pip
-    #   os: ["arch"]
+      os: ["archlinux", "centos", "debian"]
     - name: python3-pip
       os: ["debian"]
     # - name: python-dev python3-dev
