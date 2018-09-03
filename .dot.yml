@@ -7,10 +7,10 @@ role:
       action: install
       os: ["!centos"]
 
-    - name:
-        - py-pip
-        - py2-pip
-      os: ["alpine"]
+    # - name:
+    #     - py-pip
+    #     - py2-pip
+    #   os: ["alpine"]
     - name: python2-pip
       os: ["archlinux"]
     - name: python-pip # centos: epel-release
@@ -20,10 +20,10 @@ role:
     # - name: python-dev python3-dev
     #   os: ["debian"]
 
-    - name:
-        - py-setuptools
-        - py3-setuptools
-      os: ["alpine"]
+    # - name:
+    #     - py-setuptools
+    #     - py3-setuptools
+    #   os: ["alpine"]
     - name:
         - python-setuptools
         - python3-setuptools
