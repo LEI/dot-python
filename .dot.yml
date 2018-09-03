@@ -46,6 +46,7 @@ role:
     #     pip2 install --quiet --user setuptools wheel
     #     pip3 install --quiet --user setuptools wheel
     #   os: ["alpine"]
+    # TODO symlink python3 to python36 (centos)
     - python3 --version || python36 --version
     - pip --version
     - pip2 --version
