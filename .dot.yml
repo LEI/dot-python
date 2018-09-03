@@ -20,6 +20,7 @@ role:
     # - name: python-dev python3-dev
     #   os: ["debian"]
     - name:
+        - build-base
         - python2-dev
         - python3-dev
         # - py{2,3}-udev
