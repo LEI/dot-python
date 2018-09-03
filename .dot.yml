@@ -23,8 +23,8 @@ role:
         - python2-dev
         - python3-dev
         # - py{2,3}-udev
-        # - py-setuptools
-        # - py3-setuptools
+        - py-setuptools
+        - py3-setuptools
       os: ["alpine"]
     - name:
         - python-setuptools
