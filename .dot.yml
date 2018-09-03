@@ -38,9 +38,13 @@ role:
         sudo easy_install-3.6 pip
       os: ["centos"]
     # - command: pip install --upgrade --user pip
-    - command: |
-        sudo pip install --upgrade pip
-        pip install --quiet --user setuptools wheel
+    - command: sudo pip2 install --upgrade pip
+      os: ["alpine"]
+    - command: sudo pip3 install --upgrade pip
+      os: ["alpine"]
+    - command: pip2 install --quiet --user setuptools wheel
+      os: ["alpine"]
+    - command: pip3 install --quiet --user setuptools wheel
       os: ["alpine"]
     - python3 --version || python36 --version
     - pip --version
