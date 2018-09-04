@@ -9,16 +9,8 @@ role:
     - name: python3
       action: install
       os: ["!android", "!centos"]
-    - name: py-pip # py2-pip
-      os: ["alpine"]
-    - name: python2-pip
-      os: ["archlinux"]
-    - name: python-pip # centos: epel-release
-      os: ["archlinux", "centos", "debian"]
-    - name: python3-pip
+    - name: python-dev python3-dev
       os: ["debian"]
-    # - name: python-dev python3-dev
-    #   os: ["debian"]
     - name:
         - build-base
         - python2-dev
@@ -31,6 +23,14 @@ role:
     #     - python-setuptools
     #     - python3-setuptools
     #   os: ["debian"] # cygwin
+    - name: py-pip # py2-pip
+      os: ["alpine"]
+    - name: python2-pip
+      os: ["archlinux"]
+    - name: python-pip # centos: epel-release
+      os: ["archlinux", "centos", "debian"]
+    - name: python3-pip
+      os: ["debian"]
     # TODO: virtualenv
   post_install:
     - python --version
