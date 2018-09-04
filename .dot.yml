@@ -9,7 +9,9 @@ role:
     - name: python3
       action: install
       os: ["!android", "!centos"]
-    - name: python-dev python3-dev
+    - name:
+        - python-dev
+        - python3-dev
       os: ["debian"]
     - name:
         - build-base
