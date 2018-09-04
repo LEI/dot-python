@@ -10,10 +10,6 @@ role:
       action: install
       os: ["!android", "!centos"]
     - name:
-        - python-dev
-        - python3-dev
-      os: ["debian"]
-    - name:
         - build-base
         - python2-dev
         - python3-dev
@@ -21,10 +17,12 @@ role:
         # - py-setuptools
         # - py3-setuptools
       os: ["alpine"]
-    # - name:
-    #     - python-setuptools
-    #     - python3-setuptools
-    #   os: ["debian"] # cygwin
+    - name:
+        # - python-dev
+        # - python3-dev
+        - python-setuptools
+        - python3-setuptools
+      os: ["debian"] # cygwin
     - name: py-pip # py2-pip
       os: ["alpine"]
     - name: python2-pip
