@@ -9,6 +9,11 @@ role:
     - name: python3
       action: install
       os: ["!android", "!centos"]
+    # Fix termux npm install neovim
+    - name: libcrypt-dev
+      #   - python2-dev
+      #   - python-dev
+      os: ["android"]
     - name:
         - build-base
         - python2-dev
@@ -42,6 +47,9 @@ role:
     # TODO symlink python3 to python36 (centos)
     - python3 --version || python36 --version
     # - command: pip install --upgrade --user pip
+    - command: ln -s $(which pip) $(which pip)3
+      if: "[ -f $(which pip) ] && ! hash pip3"
+      os: ["android"]
     - command: |
         sudo pip2 install --upgrade pip
         sudo pip3 install --upgrade pip
