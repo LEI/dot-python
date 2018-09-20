@@ -1,6 +1,6 @@
 ---
 role:
-  pkg:
+  pkg: # virtualenv, pyenv, pipenv...
     - name: python
       action: install
     - name: python2
@@ -36,7 +36,6 @@ role:
       os: ["archlinux", "centos", "debian"]
     - name: python3-pip
       os: ["debian"]
-    # TODO: virtualenv
   post_install:
     - python --version
     - command: |
