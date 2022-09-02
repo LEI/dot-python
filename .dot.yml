@@ -33,7 +33,7 @@ role:
     - name: python2-pip
       os: ["archlinux"]
     - name: python-pip # centos: epel-release
-      os: ["archlinux", "centos", "debian", "!debian11"]
+      os: ["archlinux", "centos", "debian9", "debian10"]
     - name: python3-pip
       os: ["debian"]
   post_install:
